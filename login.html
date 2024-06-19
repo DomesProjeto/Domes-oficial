@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
+    <title>Login</title> <!-- Define o título da página -->
+    <link rel="stylesheet" href="css/login.css"> <!-- Link para a folha de estilo local -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/> <!-- Link para o ícone FontAwesome -->
+    <link rel="shortcut icon" href="img/menu/logo.png" type="image/x-icon"> <!-- Define o ícone da página -->
+</head>
+<body>
+    
+    <main id="login-container"> <!-- Container principal para o formulário de login -->
+        <form id="login_form"> <!-- Formulário de login -->
+            <div id="form_header"> <!-- Cabeçalho do formulário -->
+                <h1>Faça o seu Login</h1>
+            </div>
+
+            <div id="social_media"> <!-- Links de login por redes sociais -->
+                <a href="#">
+                    <img src="img/login/facebook.png" alt="facebook">
+                </a>
+                <a href="#">
+                    <img src="img/login/google.png" alt="google">
+                </a>
+                <a href="#">
+                    <img src="img/login/github.png" alt="github">
+                </a>
+            </div>
+
+            <div id="inputs"> <!-- Grupo de campos de entrada -->
+                <div class="input-box"> <!-- Caixa de entrada para o nome -->
+                    <label for="name">
+                        <h1>Nome:</h1> <!-- Rótulo para o campo de nome -->
+                        <div class="input-field"> <!-- Campo de entrada para o nome -->
+                            <i class="fa-solid fa-user"></i> <!-- Ícone de usuário -->
+                            <input type="text" id="name" name="name"> <!-- Campo de texto para o nome -->
+                        </div>
+                    </label>
+                </div>
+                <div class="input-box"> <!-- Caixa de entrada para o e-mail -->
+                    <label for="email">
+                        <h1>E-mail:</h1> <!-- Rótulo para o campo de e-mail -->
+                        <div class="input-field"> <!-- Campo de entrada para o e-mail -->
+                            <i class="fa-solid fa-envelope"></i> <!-- Ícone de envelope -->
+                            <input type="email" id="email" name="email"> <!-- Campo de texto para o e-mail -->
+                        </div>
+                    </label>
+                </div>
+                <div class="input-box"> <!-- Caixa de entrada para a senha -->
+                    <label for="password">
+                        <h1>Senha:</h1> <!-- Rótulo para o campo de senha -->
+                        <div class="input-field"> <!-- Campo de entrada para a senha -->
+                            <i class="fa-solid fa-user"></i> <!-- Ícone de usuário -->
+                            <input type="password" id="password" name="password"> <!-- Campo de texto para a senha -->
+                        </div>
+                    </label>
+                    <div id="forgot-password"> <!-- Link para recuperar senha -->
+                        <a href="#">
+                            <h1>Esqueci minha Senha</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" id="login-button"> <!-- Botão de login -->
+                <a href="menu.html">Entrar</a> <!-- Link para a página de menu -->
+            </button>          
+        </form>
+    </main>
+
+</body>
+</html>

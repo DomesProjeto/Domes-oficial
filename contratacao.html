@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrate um Serviço</title>
+    <link rel="stylesheet" href="css/contratar.css"> <!-- link para o arquivo de estilos CSS -->
+    <script src="js/script_contratar.js"></script> <!-- Importação do arquivo de scripts JavaScript -->
+    <link rel="shortcut icon" href="img/menu/logo.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Contratando um Serviço</h1>
+         <!-- Seleção de ambiente -->
+        <h3>Selecione o ambiente:</h3>
+        <form>
+            <fieldset>
+                <legend>Selecione o local:</legend>
+                <!-- Opções de ambiente com radio buttons -->
+                <label>
+                    <input type="radio" name="local" value="Ambiente Doméstico">
+                    Ambiente Doméstico
+                    <legend> Casa - Apartamento - Área Externa</legend>
+                </label>
+                <label>
+                    <input type="radio" name="local" value="Ambiente Comercial">
+                    Ambiente Comercial
+                    <legend>Escritório - Loja e comércio - Restaurante e Cafeteria</legend>
+                </label>
+                <label>
+                    <input type="radio" name="local" value="Ambiente Público">
+                    Ambiente Público
+                    <legend>Escolas e Universidades - Hospital e Clínica - Instituição Governamental</legend>
+                </label>
+                <label>
+                    <input type="radio" name="local" value="Ambiente Industrial">
+                    Ambiente Industrial
+                    <legend>Fábricas - Armazéns e Depósitos - Oficinas </legend>
+                </label>
+                <label>
+                    <input type="radio" name="local" value="Outros lugares Específicos">
+                    Outros lugares Específicos
+                    <legend>Condomínios - Transporte Públicos - Eventos e Espaços - Hotéis e Pousadas</legend>
+                </label>
+            </fieldset>
+        </form>
+        <!-- Seleção de serviço -->
+        <h3>Selecione o Serviço:</h3>
+        <select id="serviceSelect" onchange="selectItem()">
+            <option value="">-- Selecione um serviço --</option>
+            <optgroup label="CONSTRUÇÃO">
+                <option value="Arquiteto">Arquiteto</option>
+                <option value="Design De Interiores">Design De Interiores</option>
+                <option value="Empreiteiro">Empreiteiro</option>
+                <option value="Limpeza Pós Obra">Limpeza Pós Obra</option>
+                <option value="Marmoraria e Granito">Marmoraria e Granito</option>
+                <option value="Remoção de Entulho">Remoção de Entulho</option>
+                <option value="Pedreiro">Pedreiro</option>
+                <option value="Poço Artesiano">Poço Artesiano</option>
+            </optgroup>
+            <optgroup label="INSTALAÇÃO">
+                <option value="Antenista">Antenista</option>
+                <option value="Instalador de TV">Instalador de TV</option>
+                <option value="Instalador de Eletrônicos">Instalador de Eletrônicos</option>
+                <option value="Toldos e Coberturas">Toldos e Coberturas</option>
+                <option value="Gás">Gás</option>
+            </optgroup>
+            <optgroup label="REFORMAS E REPAROS">
+                <option value="Encanador">Encanador</option>
+                <option value="Eletricista">Eletricista</option>
+                <option value="Pavimentação">Pavimentação</option>
+                <option value="Pintor">Pintor</option>
+                <option value="Vidraceiro">Vidraceiro</option>
+                <option value="Solda e Serralheria">Solda e Serralheria</option>
+            </optgroup>
+            <optgroup label="SERVIÇOS GERAIS">
+                <option value="Chuveiro">Chuveiro</option>
+                <option value="Dedetizador">Dedetizador</option>
+                <option value="Desinfetar">Desinfetar</option>
+                <option value="Desentupidor">Desentupidor</option>
+                <option value="Tapeceiro">Tapeceiro</option>
+                <option value="Mudanças">Mudanças</option>
+            </optgroup>
+            <optgroup label="PARA CASA">
+                <option value="Banheira">Banheira</option>
+                <option value="Decorador">Decorador</option>
+                <option value="Jardinagem">Jardinagem</option>
+                <option value="Montador">Montador</option>
+                <option value="Piscina">Piscina</option>
+                <option value="Rede de Proteção">Rede de Proteção</option>
+                <option value="Paisagista">Paisagista</option>
+                <option value="Diarista">Diarista</option>
+                <option value="Lavadeira">Lavadeira</option>
+                <option value="Personal Shopper">Personal Shopper</option>
+            </optgroup>
+            <optgroup label="PARA A FAMÍLIA">
+                <option value="Babá">Babá</option>
+                <option value="Cozinheira">Cozinheira</option>
+                <option value="Entregador">Entregador</option>
+                <option value="Motorista">Motorista</option>
+                <option value="Personal Organizer">Personal Organizer</option>
+                <option value="Segurança Particular">Segurança Particular</option>
+            </optgroup>
+            <optgroup label="PARA OS PETS">
+                <option value="Adestrador de Cães">Adestrador de Cães</option>
+                <option value="Passeador de Pets">Passeador de Pets</option>
+                <option value="Serviços para Pets">Serviços para Pets</option>
+            </optgroup>
+            <optgroup label="ASSISTÊNCIA TÉCNICA">
+                <option value="Aparelho de Som">Aparelho de Som</option>
+                <option value="Aquecedor a Gás">Aquecedor a Gás</option>
+                <option value="Ar Condicionado">Ar Condicionado</option>
+                <option value="Câmera">Câmera</option>
+                <option value="DVD/Blu-Ray">DVD/Blu-Ray</option>
+                <option value="Televisão">Televisão</option>
+                <option value="Vídeo Game">Vídeo Game</option>
+                <option value="Adega Climatizada">Adega Climatizada</option>
+                <option value="Fogão/Cooktop">Fogão/Cooktop</option>
+                <option value="Geladeira-Freezer">Geladeira-Freezer</option>
+                <option value="Lava-Louça">Lava-Louça</option>
+                <option value="Máquina de Costura">Máquina de Costura</option>
+                <option value="Secadora">Secadora</option>
+                <option value="Máquina de Lavar">Máquina de Lavar</option>
+                <option value="Microondas">Microondas</option>
+                <option value="Celular">Celular</option>
+                <option value="Computador">Computador</option>
+                <option value="Tabletes">Tabletes</option>
+                <option value="Cabos">Cabos</option>
+                <option value="Impressora">Impressora</option>
+                <option value="Fones de Ouvido">Fones de Ouvido</option>
+            </optgroup>
+        </select>
+
+        <!-- Div para mostrar o serviço selecionado -->
+        <div class="selected-item" id="selectedItem">Você Selecionou: Nenhum item adicionado ainda</div>
+        <!-- Formulário para seleção de data e hora -->
+        <div class="container">
+            <h2>Selecione a data e hora do evento:</h2>
+            <form id="eventForm">
+                <label for="dataHora">Data e Hora:</label>
+                <input type="datetime-local" id="dataHora" name="dataHora">
+            </form>
+        </div>
+        <!-- Formulário para preenchimento de endereço -->
+        <h3>Selecione o local:</h3>
+
+        <form action="/submit_endereco" method="POST">
+    
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" required>
+    
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" required>
+    
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+    
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+    
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+    
+        </form>
+         <!-- Botão para abrir o mapa -->
+        <a href="https://www.google.com/maps" target="_blank" class="map-button">Abrir Mapa</a>
+        
+        <!-- Campo para informação adicional -->
+        <h3>Deseja informar algo a mais?</h3>
+        <label for="campoTexto">Adicionar informação:</label>
+        <input type="text" id="campoTexto" name="nome">
+        
+        <!-- Botão para buscar trabalhador -->
+        <a href="buscas.html" class="button">Buscar Trabalhador</a>
+    </div>
+</body>
+</html>
